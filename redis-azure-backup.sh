@@ -133,7 +133,7 @@ function verbose_vars() {
   logverbose "RDB_DIR: ${RDB_DIR}"
   logverbose "DATE: ${DATE}"
   logverbose "DRY_RUN: ${DRY_RUN}"
-  logverbose "GCS_BUCKET: ${GCS_BUCKET}"
+  logverbose "AZ_BUCKET: ${AZ_BUCKET}"
   logverbose "AZCLI: ${AZCLI}"
   logverbose "HOSTNAME: ${HOSTNAME}"
   logverbose "LOG_DIR: ${LOG_DIR}"
@@ -231,7 +231,7 @@ do
           HOSTNAME=${OPTARG}
           ;;
       b)
-          GCS_BUCKET=${OPTARG%/}
+          AZ_BUCKET=${OPTARG%/}
           ;;
       B)
           ACTION="backup"
