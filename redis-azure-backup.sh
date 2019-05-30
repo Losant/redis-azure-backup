@@ -109,7 +109,7 @@ function validate() {
       logerror "Please pass in the Azure Container name to use with this script"
       exit 1
   else
-      if ! ${AZCLI} storage blog list --container-name ${AZ_BUCKET} &> /dev/null; then
+      if ! ${AZCLI} storage blob list --container-name ${AZ_BUCKET} &> /dev/null; then
       # if ! ${AZCLI} ls ${AZ_BUCKET} &> /dev/null; then   # Change this
         logerror "Cannot access Azure Storage Account container ${AZ_BUCKET} make sure" \
         " it exists"
